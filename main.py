@@ -1,16 +1,15 @@
 #!/usr/bin/env python
-import tradeService
 import logging
+logging.basicConfig(filename = "otcbtc.log",level = logging.INFO)
+import tradeService,traceback
 
 #logging setting
 
-logging.basicConfig(filename = "otcbtc.log",level = logging.INFO)
 
 
 
 
 if __name__ == '__main__':
-
 
 
 	f = open("market.list")
@@ -19,5 +18,7 @@ if __name__ == '__main__':
 	#markets = ["trxeth"]
 	while True:
 		for market in markets:
-			tradeService.create(market)
-		pass
+			try:
+				tradeService.create(market);
+			except Exception as e:
+				logging.error(traceback.print_exc())
