@@ -1,3 +1,4 @@
+#!/usr/bin/evn python
 import requests,trades,logging
 
 
