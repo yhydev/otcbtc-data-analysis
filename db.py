@@ -15,7 +15,7 @@ conn.execute('''CREATE TABLE IF NOT EXISTS OTCBTC_TRADES
        funds TEXT,
        created_at TEXT,
        side TEXT);''')
-logging.info"database connect success.";
+logging.info("database connect success.")
 conn.commit()
 conn.close()
 
