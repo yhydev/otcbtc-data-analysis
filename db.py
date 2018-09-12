@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import sqlite3
+import sqlite3,logging
 
 
 
@@ -15,7 +15,7 @@ conn.execute('''CREATE TABLE IF NOT EXISTS OTCBTC_TRADES
        funds TEXT,
        created_at TEXT,
        side TEXT);''')
-print "Table created successfully";
+logging.info"database connect success.";
 conn.commit()
 conn.close()
 
