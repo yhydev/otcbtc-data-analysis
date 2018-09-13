@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import logging
-response = requests.get("https://bb.otcbtc.com/api/v2/trades?market="+market+"&limit=1000")
+logging.basicConfig(filename = "otcbtc.log",level = logging.INFO,datefmt = "%Y-%m-%d %H:%M:%S",format = "%(asctime)s %(levelname)s\t: %(message)s")
 import tradeService,traceback
 
 #logging setting
